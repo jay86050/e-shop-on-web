@@ -3,7 +3,7 @@ name: Deploy to Azure Web App
 on:
   push:
     branches:
-      - main  # Deploy only when there is a push to the main branch. Change it as per your branch policy.
+      - main  # Deploy only when there is a push to the main branch. Adjust as needed.
 
 jobs:
   build-and-deploy:
@@ -24,9 +24,9 @@ jobs:
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
     # Deploy to Azure Web App
-    - name: 'Deploy to Azure WebApp'
+    - name: Deploy to Azure WebApp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'e-shop-jay'           # Replace with your Azure Web App name
-        slot-name: 'production'                   # Change to a different slot if needed
-        package: '.'                              # Path to the code directory/package
+        app-name: 'e-shop jay'      # Replace with your Azure Web App name
+        slot-name: 'production'            # Specify slot if needed (e.g., staging)
+        package: '.'                       # Path to the code/package directory
