@@ -24,6 +24,6 @@ jobs:
     - name: Deploy to Azure WebApp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'e-shop_WEB_APP_jay'      # Replace with your Azure Web App name
+        app-name: 'rg-eshoponweb-jay'      # Replace with your Azure Web App name
         slot-name: 'production'            # Specify slot if needed (e.g., staging)
         package: '.'                       # Path to the code/package directory
