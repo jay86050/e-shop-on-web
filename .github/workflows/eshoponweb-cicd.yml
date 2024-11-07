@@ -18,15 +18,12 @@ jobs:
     - name: Azure Login
       uses: azure/login@v1
       with:
-        client-id: ${{ secrets.AZURE_CLIENT_ID }}
-        tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-        client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
-        subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     # Deploy to Azure Web App
     - name: Deploy to Azure WebApp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'e-shop jay'      # Replace with your Azure Web App name
+        app-name: 'e-shop_WEB_APP_jay'      # Replace with your Azure Web App name
         slot-name: 'production'            # Specify slot if needed (e.g., staging)
         package: '.'                       # Path to the code/package directory
